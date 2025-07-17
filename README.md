@@ -1,17 +1,12 @@
 # ML10
-I can edit - Anitha
-
-
-I can edit too - Puneet
-
-
 📊 Cluster Cryptos by Behavior
-🔍 Project Overview
+
+🔍** Project Overview**
 This project aims to analyze and group cryptocurrencies based on their historical price behavior using clustering techniques. The objective is to discover hidden structure in the crypto market and provide insights into how different coins behave relative to one another over time.
 
 By clustering coins based on key performance metrics like volatility, return, and correlation with Bitcoin, we aim to identify behavioral groupings such as high-volatility coins, stable performers, or Bitcoin-following coins. These insights may help investors, analysts, and developers better understand market dynamics, segment the market, or design targeted investment strategies.
 
-💼 Business Motivation
+💼 **Business Motivation**
 The cryptocurrency market is known for its volatility, diversity, and lack of structure compared to traditional financial markets. Thousands of coins exist, but their behavior and investment risk profiles differ drastically.
 
 Why this matters:
@@ -30,7 +25,7 @@ Understanding altcoin dependencies on Bitcoin movements.
 
 Spotting potential outliers or unique market movers.
 
-📦 Dataset
+📦 **Dataset**
 We use the All Crypto Currencies dataset from Kaggle, provided by JesseVent.
 
 Dataset Highlights:
@@ -49,7 +44,7 @@ Handling missing values and low-volume/noisy coins.
 
 Aggregating per-coin behavioral metrics (see below).
 
-🧠 Proposed Features for Clustering
+🧠 **Proposed Features for Clustering**
 We plan to engineer a feature vector per coin based on:
 
 Average daily return
@@ -66,7 +61,7 @@ Sharpe ratio or risk-adjusted return
 
 These will allow grouping based on volatility, performance, stability, and Bitcoin dependency.
 
-🔧 Methods & Tools
+🔧 **Methods & Tools**
 Data Wrangling: pandas, numpy
 
 Visualization: matplotlib, seaborn, plotly
@@ -81,7 +76,7 @@ Exploration Platform: Jupyter Notebook / Google Colab
 
 Optional Dashboard: Streamlit or Dash (time permitting)
 
-⚠️ Risks and Unknowns
+⚠️** Risks and Unknowns**
 Data Sparsity & Inconsistency
 Many altcoins are inactive, short-lived, or sparsely traded. Filtering appropriate coins will be essential.
 
@@ -94,7 +89,7 @@ Clustering may be highly sensitive to how we scale and normalize different featu
 Labeling & Validation
 Unsupervised learning lacks ground truth. We will rely on cluster interpretability and qualitative assessment.
 
-🧑‍🤝‍🧑 Team Setup (5 Members)
+🧑‍🤝‍🧑 **Team Setup (5 Members)**
 To be filled
 
 📅 Timeline
