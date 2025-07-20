@@ -17,40 +17,59 @@ Exchanges, funds, and portfolio managers can benefit from behavioral segmentatio
 Developers and researchers can use such clustering to study altcoin trends and market anomalies.
 
 **Dataset**
-We use the All Crypto Currencies dataset from Kaggle, provided by JesseVent. **Include link**
+We use the All Crypto Currencies dataset from Kaggle, [provided by JesseVent.](https://www.kaggle.com/datasets/jessevent/all-crypto-currencies)
 
 Dataset Highlights:
 
 Daily market data for thousands of cryptocurrencies from:
+
 Earliest date: 2013-04-28
+
 Latest date: 2018-11-30
 
+
 There are 13 Features available:
+
 slug - Unique identifier for each cryptocurrency (e.g., "bitcoin", "ethereum")
+
 symbol - Trading symbol (e.g., "BTC", "ETH")
+
 name - Full name of the cryptocurrency (e.g., "Bitcoin", "Ethereum")
+
 date - Trading date
+
 ranknow - Current rank (1 to 2000+)
+
 open - Opening price 
+
 high - Highest price of the day 
+
 low - Lowest price of the day 
+
 close - Closing price 
+
 volume - Trading volume 
+
 market - Market capitalization (labeled as "market" not "market_cap")
+
 close_ratio - (Close-Low)/(High-Low) - normalized position of close within daily range
+
 spread - USD difference between high and low prices
+
+
 
 ~1,584 unique coins across ~620,000 records.
 
-Initial preprocessing will include:
 
+Initial preprocessing will include:
 Filtering coins with sufficient data length (e.g., at least 180 days of trading).
 
 Handling missing values and low-volume/noisy coins.
 
-Aggregating per-coin behavioral metrics (TBD).
+Aggregating per-coin behavioral metrics.
 
 **Risks and Unknowns**
+
 There are instances where more than one slug/name shares the same trading symbol (e.g. webcoin and webchain share the symbol WEB). In addition, pricing information over the dataset timeframe is not consistent so either incomplete or coins have stopped trading.
 
 Data Sparsity & Inconsistency
