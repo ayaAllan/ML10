@@ -1,5 +1,4 @@
-# ML10
-📊 Cluster Cryptos by Behavior
+# Cluster Cryptos by Behavior
 
 **Project Overview**
 This project aims to analyze and group cryptocurrencies based on their historical price behavior using clustering techniques. The objective is to discover hidden structure in the crypto market and provide insights into how different coins behave relative to one another over time.
@@ -23,10 +22,12 @@ We use the All Crypto Currencies dataset from Kaggle, provided by JesseVent. **I
 Dataset Highlights:
 
 Daily market data for thousands of cryptocurrencies from:
+
 Earliest date: 2013-04-28
 Latest date: 2018-11-30
 
 There are 13 Features available:
+
 slug - Unique identifier for each cryptocurrency (e.g., "bitcoin", "ethereum")
 symbol - Trading symbol (e.g., "BTC", "ETH")
 name - Full name of the cryptocurrency (e.g., "Bitcoin", "Ethereum")
