@@ -22,11 +22,26 @@ We use the All Crypto Currencies dataset from Kaggle, provided by JesseVent. **I
 
 Dataset Highlights:
 
-Daily market data for thousands of cryptocurrencies from ???.
+Daily market data for thousands of cryptocurrencies from:
+Earliest date: 2013-04-28
+Latest date: 2018-11-30
 
-Features include: open, high, low, close, volume, market_cap, and rank per coin per day verify???.
+There are 13 Features available:
+slug - Unique identifier for each cryptocurrency (e.g., "bitcoin", "ethereum")
+symbol - Trading symbol (e.g., "BTC", "ETH")
+name - Full name of the cryptocurrency (e.g., "Bitcoin", "Ethereum")
+date - Trading date
+ranknow - Current rank (1 to 2000+)
+open - Opening price 
+high - Highest price of the day 
+low - Lowest price of the day 
+close - Closing price 
+volume - Trading volume 
+market - Market capitalization (labeled as "market" not "market_cap")
+close_ratio - (Close-Low)/(High-Low) - normalized position of close within daily range
+spread - USD difference between high and low prices
 
-~1,600 unique coins across ~620,000 records. verify ????
+~1,584 unique coins across ~620,000 records.
 
 Initial preprocessing will include:
 
@@ -37,6 +52,8 @@ Handling missing values and low-volume/noisy coins.
 Aggregating per-coin behavioral metrics (TBD).
 
 **Risks and Unknowns**
+There are instances where more than one slug/name shares the same trading symbol (e.g. webcoin and webchain share the symbol WEB). In addition, pricing information over the dataset timeframe is not consistent so either incomplete or coins have stopped trading.
+
 Data Sparsity & Inconsistency
 Many altcoins are inactive, short-lived, or sparsely traded. Filtering appropriate coins will be essential.
 
@@ -45,3 +62,5 @@ Behavior can change over time. We'll explore using fixed windows (e.g., past 6 m
 
 Labeling & Validation
 Unsupervised learning lacks ground truth. How will we interpret clusters and assessment performance?
+
+
