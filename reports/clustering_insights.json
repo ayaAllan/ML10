@@ -1,0 +1,314 @@
+{
+    "generated_date": "2025-07-25 16:22:20.645106",
+    "data_period": {
+        "start": "2013-04-28",
+        "end": "2018-11-30"
+    },
+    "clustering_summary": {
+        "total_cryptocurrencies": 1383,
+        "number_of_clusters": 5,
+        "clustering_quality": 0.9918455210940101
+    },
+    "risk_assessment": {
+        "risk_categories": {
+            "Very High Risk": 1329,
+            "High Risk": 47,
+            "Low Risk": 4,
+            "Medium Risk": 3
+        },
+        "cluster_risk_profiles": {
+            "cluster_0": {
+                "average_risk_score": 0.01890997265044587,
+                "risk_category": "Very High Risk",
+                "volatility_range": {
+                    "min": 0.0100659980314027,
+                    "max": 87.86792749724518
+                }
+            },
+            "cluster_1": {
+                "average_risk_score": 0.04470698720049638,
+                "risk_category": "Very High Risk",
+                "volatility_range": {
+                    "min": 1.3374985007933156,
+                    "max": 1.3374985007933156
+                }
+            },
+            "cluster_2": {
+                "average_risk_score": 42.16352441713296,
+                "risk_category": "Very High Risk",
+                "volatility_range": {
+                    "min": 1251.922490588262,
+                    "max": 1251.922490588262
+                }
+            },
+            "cluster_3": {
+                "average_risk_score": 100.0,
+                "risk_category": "Very High Risk",
+                "volatility_range": {
+                    "min": 2969.193600573527,
+                    "max": 2969.193600573527
+                }
+            },
+            "cluster_4": {
+                "average_risk_score": 32.36701501573562,
+                "risk_category": "Very High Risk",
+                "volatility_range": {
+                    "min": 701.2315730211592,
+                    "max": 1220.8607199365042
+                }
+            }
+        }
+    },
+    "investment_recommendations": {
+        "Conservative": {
+            "description": "Risk-averse investors seeking stable returns",
+            "risk_tolerance": "Low",
+            "suitable_coins_count": 0,
+            "top_5_recommendations": []
+        },
+        "Moderate": {
+            "description": "Balanced investors seeking growth with controlled risk",
+            "risk_tolerance": "Medium",
+            "suitable_coins_count": 1,
+            "top_5_recommendations": [
+                {
+                    "name": "Colu Local Network",
+                    "symbol": "CLN",
+                    "cluster": 0,
+                    "expected_daily_return": -0.0092286956929824,
+                    "volatility": 0.046427366674722,
+                    "risk_category": "Medium Risk"
+                }
+            ]
+        },
+        "Aggressive": {
+            "description": "Risk-tolerant investors seeking high returns",
+            "risk_tolerance": "High",
+            "suitable_coins_count": 206,
+            "top_5_recommendations": [
+                {
+                    "name": "Stratis",
+                    "symbol": "STRAT",
+                    "cluster": 0,
+                    "expected_daily_return": 0.0097149615418113,
+                    "volatility": 0.099789620980196,
+                    "risk_category": "Very High Risk"
+                },
+                {
+                    "name": "Ethereum",
+                    "symbol": "ETH",
+                    "cluster": 0,
+                    "expected_daily_return": 0.0059862102409345,
+                    "volatility": 0.0740065973038274,
+                    "risk_category": "High Risk"
+                },
+                {
+                    "name": "Karbo",
+                    "symbol": "KRB",
+                    "cluster": 0,
+                    "expected_daily_return": 0.0075707808339586,
+                    "volatility": 0.0987272912676584,
+                    "risk_category": "Very High Risk"
+                },
+                {
+                    "name": "Decred",
+                    "symbol": "DCR",
+                    "cluster": 0,
+                    "expected_daily_return": 0.0066468205908285,
+                    "volatility": 0.0884992701834472,
+                    "risk_category": "Very High Risk"
+                },
+                {
+                    "name": "Golem",
+                    "symbol": "GNT",
+                    "cluster": 0,
+                    "expected_daily_return": 0.0071747326436026,
+                    "volatility": 0.0987459764252266,
+                    "risk_category": "Very High Risk"
+                }
+            ]
+        },
+        "Speculative": {
+            "description": "Very high risk tolerance, seeking explosive growth",
+            "risk_tolerance": "Very High",
+            "suitable_coins_count": 1153,
+            "top_5_recommendations": [
+                {
+                    "name": "MACRON",
+                    "symbol": "MCRN",
+                    "cluster": 0,
+                    "expected_daily_return": 0.1530797486101187,
+                    "volatility": 0.7261290268485466,
+                    "risk_category": "Very High Risk"
+                },
+                {
+                    "name": "JavaScript Token",
+                    "symbol": "JS",
+                    "cluster": 0,
+                    "expected_daily_return": 0.1307512219403924,
+                    "volatility": 0.7484767361529469,
+                    "risk_category": "Very High Risk"
+                },
+                {
+                    "name": "LiteDoge",
+                    "symbol": "LDOGE",
+                    "cluster": 0,
+                    "expected_daily_return": 0.1502957424381786,
+                    "volatility": 0.8761718973759745,
+                    "risk_category": "Very High Risk"
+                },
+                {
+                    "name": "Litecred",
+                    "symbol": "LTCR",
+                    "cluster": 0,
+                    "expected_daily_return": 0.0941472075053934,
+                    "volatility": 0.5549791702760739,
+                    "risk_category": "Very High Risk"
+                },
+                {
+                    "name": "Jin Coin",
+                    "symbol": "JIN",
+                    "cluster": 0,
+                    "expected_daily_return": 0.129842935553705,
+                    "volatility": 0.7673911202405302,
+                    "risk_category": "Very High Risk"
+                }
+            ]
+        }
+    },
+    "portfolio_diversification_strategies": {
+        "Cluster-Based Diversification": {
+            "description": "Allocate across different behavioral clusters to reduce concentration risk",
+            "approach": "Equal or weighted allocation across clusters",
+            "benefits": [
+                "Exposure to different market behaviors",
+                "Reduced correlation risk",
+                "Balanced risk-return profile"
+            ]
+        },
+        "Risk-Tiered Portfolio": {
+            "description": "Pyramid allocation with majority in low-risk assets",
+            "approach": "50% Low Risk, 30% Medium Risk, 15% High Risk, 5% Very High Risk",
+            "benefits": [
+                "Controlled risk exposure",
+                "Stable base with growth potential",
+                "Suitable for most investors"
+            ]
+        },
+        "Core-Satellite Strategy": {
+            "description": "Core holdings in established coins with satellite positions in high-growth potential",
+            "approach": "70% in top market cap coins, 30% in selected altcoins",
+            "benefits": [
+                "Stability from core holdings",
+                "Growth from satellites",
+                "Flexible rebalancing"
+            ]
+        },
+        "Bitcoin-Correlation Based": {
+            "description": "Diversify based on correlation with Bitcoin",
+            "approach": "Mix high, medium, and low correlation coins",
+            "benefits": [
+                "Hedge against Bitcoin volatility",
+                "Capture independent movements",
+                "True diversification"
+            ]
+        }
+    },
+    "market_condition_strategies": {
+        "Bull Market": {
+            "description": "Rising market with positive sentiment",
+            "recommended_clusters": [
+                2,
+                3
+            ],
+            "strategy": "Increase exposure to high-growth, volatile altcoins",
+            "allocation_shift": "Move 20% from stable to growth coins",
+            "risk_management": "Set trailing stop losses to protect gains"
+        },
+        "Bear Market": {
+            "description": "Declining market with negative sentiment",
+            "recommended_clusters": [
+                0
+            ],
+            "strategy": "Focus on established coins with high market cap",
+            "allocation_shift": "Increase stable coin allocation to 30-40%",
+            "risk_management": "Dollar-cost averaging for accumulation"
+        },
+        "High Volatility": {
+            "description": "Extreme price swings and uncertainty",
+            "recommended_clusters": [],
+            "strategy": "Reduce position sizes, increase diversification",
+            "allocation_shift": "Rebalance more frequently (weekly)",
+            "risk_management": "Use smaller position sizes, wider stop losses"
+        },
+        "Consolidation": {
+            "description": "Sideways market with low volatility",
+            "recommended_clusters": [
+                0,
+                1,
+                2,
+                3,
+                4
+            ],
+            "strategy": "Accumulate quality projects, prepare for breakout",
+            "allocation_shift": "Maintain balanced allocation",
+            "risk_management": "Set alerts for breakout levels"
+        }
+    },
+    "risk_management_guidelines": {
+        "Position Sizing": {
+            "Low Risk": {
+                "max_position": "10-15%",
+                "stop_loss": "5-10%"
+            },
+            "Medium Risk": {
+                "max_position": "5-10%",
+                "stop_loss": "10-15%"
+            },
+            "High Risk": {
+                "max_position": "2-5%",
+                "stop_loss": "15-20%"
+            },
+            "Very High Risk": {
+                "max_position": "1-2%",
+                "stop_loss": "20-25%"
+            }
+        },
+        "Rebalancing Frequency": {
+            "Conservative": "Quarterly",
+            "Moderate": "Monthly",
+            "Aggressive": "Bi-weekly",
+            "Speculative": "Weekly"
+        },
+        "Diversification Rules": [
+            "Minimum 10-15 different cryptocurrencies",
+            "No more than 20% in any single coin",
+            "At least 3 different clusters represented",
+            "Maximum 40% in high correlation (>0.8) coins",
+            "Keep 10-20% in stable assets for opportunities"
+        ],
+        "Exit Strategies": [
+            "Set profit targets based on risk/reward ratio (minimum 2:1)",
+            "Use trailing stops for winning positions",
+            "Cut losses quickly on underperformers",
+            "Rebalance when any position exceeds 25% of portfolio",
+            "Review and adjust strategy monthly"
+        ]
+    },
+    "key_insights": [
+        "Identified 5 distinct behavioral clusters in the cryptocurrency market",
+        "Bitcoin correlation varies significantly across clusters, from -0.09 to 1.00",
+        "Risk levels range from 0.0101 to 2969.1936 daily volatility",
+        "Market cap concentration: Top 10 coins represent 70.8% of total market cap",
+        "Diversification across behavioral clusters can significantly reduce portfolio risk",
+        "Conservative investors should focus on high market cap coins with Bitcoin correlation > 0.7",
+        "Aggressive investors can explore low correlation altcoins for higher potential returns"
+    ],
+    "warnings_and_disclaimers": [
+        "Historical performance does not guarantee future results",
+        "Cryptocurrency investments are highly volatile and risky",
+        "This analysis is based on data from 2013-2018 and may not reflect current market conditions",
+        "Always conduct your own research before making investment decisions",
+        "Consider consulting with a financial advisor for personalized advice"
+    ]
+}

@@ -1,0 +1,20 @@
+.DS_Store
+# Xcode
+#
+# gitignore contributors: remember to update Global/Xcode.gitignore
+
+## Build generated
+build/
+DerivedData/
+
+#.env file
+.env.local
+*Gen.plist
+*Generated/
+
+node_modules
+npm-debug.log
+
+Desktop.ini
+
+crypto-markets.csv

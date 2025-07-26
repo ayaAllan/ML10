@@ -1,0 +1,23 @@
+{
+    "n_clusters": 5,
+    "clustering_method": "KMeans",
+    "features_used": [
+        "avg_daily_return",
+        "volatility",
+        "sharpe_ratio",
+        "max_drawdown",
+        "price_range",
+        "btc_correlation"
+    ],
+    "scaling_method": "RobustScaler",
+    "total_cryptocurrencies": 1383,
+    "silhouette_score": 0.9918455210940101,
+    "cluster_names": {
+        "0": "High Risk/High Return",
+        "1": "Stable Performers",
+        "2": "Bitcoin Followers",
+        "3": "Volatile Altcoins",
+        "4": "Low Activity Coins"
+    },
+    "date_generated": "2025-07-25 04:10:13.953649"
+}
