@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cryptocurrency Clustering Project - Behavioral Analysis & Investment Insights</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #1a1a2e;
+            color: #eee;
+            overflow-x: hidden;
+        }
+        .slide {
+            min-height: 100vh;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border-bottom: 3px solid #16213e;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+        }
+        .slide:nth-child(even) {
+            background: linear-gradient(135deg, #16213e 0%, #0f3460 100%);
+        }
+        h1 {
+            color: #4fbdba;
+            font-size: 3em;
+            margin-bottom: 20px;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        h2 {
+            color: #7ec8e3;
+            font-size: 2.2em;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #4fbdba;
+            padding-bottom: 10px;
+        }
+        h3 {
+            color: #a7d7e8;
+            font-size: 1.8em;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        h4 {
+            color: #b8dde8;
+            font-size: 1.4em;
+            margin-top: 15px;
+            margin-bottom: 8px;
+        }
+        p, li {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        ul li:before {
+            content: "▸ ";
+            color: #4fbdba;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: 20px;
+        }
+        .stat-box {
+            background: rgba(79, 189, 186, 0.1);
+            border: 2px solid #4fbdba;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+        }
+        .highlight {
+            color: #4fbdba;
+            font-weight: bold;
+        }
+        .warning {
+            color: #e74c3c;
+            font-weight: bold;
+        }
+        .success {
+            color: #2ecc71;
+            font-weight: bold;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            padding: 20px;
+            transition: transform 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+        .code {
+            background: #0a0a0a;
+            border: 1px solid #333;
+            border-radius: 5px;
+            padding: 15px;
+            font-family: 'Courier New', monospace;
+            margin: 20px 0;
+            overflow-x: auto;
+        }
+        .title-slide {
+            text-align: center;
+            background: linear-gradient(135deg, #0f3460 0%, #16213e 50%, #1a1a2e 100%);
+        }
+        .subtitle {
+            font-size: 1.5em;
+            color: #7ec8e3;
+            margin-bottom: 40px;
+        }
+        .meta-info {
+            font-size: 1.1em;
+            color: #a7d7e8;
+            margin: 10px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th {
+            background: #4fbdba;
+            color: #1a1a2e;
+            padding: 12px;
+            text-align: left;
+        }
+        td {
+            border: 1px solid #4fbdba;
+            padding: 10px;
+        }
+        tr:nth-child(even) {
+            background: rgba(79, 189, 186, 0.1);
+        }
+        .nav {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: rgba(0,0,0,0.8);
+            padding: 10px;
+            border-radius: 5px;
+            z-index: 1000;
+        }
+        .nav button {
+            background: #4fbdba;
+            color: #1a1a2e;
+            border: none;
+            padding: 10px 20px;
+            margin: 0 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .nav button:hover {
+            background: #7ec8e3;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Slide 1: Title -->
+<div class="slide title-slide">
+    <h1>Clustering Cryptocurrencies by Behavior</h1>
+    <p class="subtitle">An Advanced Machine Learning Approach to Market Segmentation</p>
+    <div class="stat-box" style="max-width: 600px; margin: 40px auto;">
+        <p class="meta-info"><strong>Project Team:</strong> Data Science Initiative</p>
+        <p class="meta-info"><strong>Date:</strong> July 2025</p>
+        <p class="meta-info"><strong>Dataset Period:</strong> 2013-2018</p>
+        <p class="meta-info"><strong>Total Cryptocurrencies Analyzed:</strong> <span class="highlight">1,383</span></p>
+    </div>
+</div>
+
+<!-- Slide 2: Goals & Objectives -->
+<div class="slide">
+    <h1>Project Goals & Objectives</h1>
+    <div class="grid">
+        <div class="card">
+            <h3>Primary Goals</h3>
+            <ul>
+                <li><span class="highlight">Discover hidden structure</span> in the cryptocurrency market</li>
+                <li><span class="highlight">Group cryptocurrencies</span> based on behavioral patterns</li>
+                <li><span class="highlight">Provide actionable insights</span> for investors and analysts</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>Specific Objectives</h3>
+            <ul>
+                <li>Identify behavioral groupings (high-volatility, stable performers, Bitcoin-followers)</li>
+                <li>Create risk-based investment recommendations</li>
+                <li>Develop portfolio diversification strategies</li>
+                <li>Enable market segmentation for targeted investment</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 3: Business Motivation -->
+<div class="slide">
+    <h1>Business Motivation</h1>
+    <h2>Why This Matters</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>The Challenge</h3>
+            <ul>
+                <li><span class="warning">Market Complexity:</span> Thousands of cryptocurrencies with vastly different behaviors</li>
+                <li><span class="warning">Investment Confusion:</span> Difficult to choose beyond Bitcoin and Ethereum</li>
+                <li><span class="warning">Risk Assessment:</span> Lack of structured approach to evaluate crypto risk profiles</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>The Opportunity</h3>
+            <ul>
+                <li><span class="success">For Investors:</span> Better understand risk-return profiles</li>
+                <li><span class="success">For Exchanges:</span> Create diversified product offerings</li>
+                <li><span class="success">For Portfolio Managers:</span> Design targeted investment strategies</li>
+                <li><span class="success">For Researchers:</span> Study altcoin trends and market anomalies</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 4: Dataset Overview -->
+<div class="slide">
+    <h1>Dataset Overview</h1>
+    <div class="stat-box">
+        <h3>All Crypto Currencies Dataset (Kaggle)</h3>
+        <ul>
+            <li><strong>Source:</strong> JesseVent</li>
+            <li><strong>Time Period:</strong> April 28, 2013 - November 30, 2018</li>
+            <li><strong>Total Records:</strong> ~620,000</li>
+            <li><strong>Unique Cryptocurrencies:</strong> ~1,584</li>
+        </ul>
+    </div>
+    <h3>Key Features (13 total)</h3>
+    <table>
+        <tr>
+            <th>Category</th>
+            <th>Features</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>Identifiers</td>
+            <td>slug, symbol, name</td>
+            <td>Unique identification for each cryptocurrency</td>
+        </tr>
+        <tr>
+            <td>Price Data</td>
+            <td>open, high, low, close</td>
+            <td>Daily trading price information</td>
+        </tr>
+        <tr>
+            <td>Volume Metrics</td>
+            <td>volume, market cap</td>
+            <td>Trading activity and market valuation</td>
+        </tr>
+        <tr>
+            <td>Derived Features</td>
+            <td>close_ratio, spread</td>
+            <td>Calculated metrics for analysis</td>
+        </tr>
+        <tr>
+            <td>Ranking</td>
+            <td>ranknow</td>
+            <td>Current rank (1 to 2000+)</td>
+        </tr>
+    </table>
+</div>
+
+<!-- Slide 5: Tasks & Workflow -->
+<div class="slide">
+    <h1>Project Tasks & Workflow</h1>
+    <div class="grid">
+        <div class="card">
+            <h3>1. Data Preparation</h3>
+            <ul>
+                <li>Cleaned and preprocessed 620,000+ records</li>
+                <li>Handled missing values and inconsistencies</li>
+                <li>Filtered coins with sufficient trading history (180+ days)</li>
+                <li>Created yearly segmented datasets</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>2. Feature Engineering</h3>
+            <ul>
+                <li>Calculated behavioral metrics (volatility, returns, correlations)</li>
+                <li>Aggregated per-coin statistics</li>
+                <li>Created risk scoring system</li>
+                <li>Normalized features for clustering</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>3. Clustering Analysis</h3>
+            <ul>
+                <li>Applied unsupervised learning algorithms</li>
+                <li>Identified 5 distinct behavioral clusters</li>
+                <li>Achieved clustering quality score: <span class="success">0.992</span></li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>4. Investment Insights</h3>
+            <ul>
+                <li>Generated risk-based recommendations</li>
+                <li>Created portfolio strategies</li>
+                <li>Developed market condition guidelines</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 6: Technical Implementation -->
+<div class="slide">
+    <h1>Technical Implementation</h1>
+    <h2>Data Processing Pipeline</h2>
+    <div class="code">
+        Raw Data (CSV) → Data Cleaning → Feature Engineering → Clustering → Insights
+    </div>
+    <div class="grid">
+        <div class="card">
+            <h3>Key Technologies</h3>
+            <ul>
+                <li><strong>Language:</strong> Python</li>
+                <li><strong>Data Processing:</strong> Pandas, NumPy</li>
+                <li><strong>Machine Learning:</strong> Scikit-learn</li>
+                <li><strong>Visualization:</strong> Matplotlib, Seaborn</li>
+                <li><strong>Notebooks:</strong> Jupyter</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>Processing Steps</h3>
+            <ul>
+                <li><strong>data_preparation.ipynb:</strong> Data cleaning and preprocessing</li>
+                <li><strong>feature_engineering.ipynb:</strong> Feature creation and clustering</li>
+                <li><strong>investment_insights.ipynb:</strong> Analysis and recommendations</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 7: Clustering Results -->
+<div class="slide">
+    <h1>Clustering Results</h1>
+    <h2>5 Distinct Behavioral Clusters Identified</h2>
+    <div class="stat-box">
+        <h3>Cluster Distribution</h3>
+        <table>
+            <tr>
+                <th>Cluster</th>
+                <th>Number of Coins</th>
+                <th>Percentage</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>Cluster 0</td>
+                <td>1,324</td>
+                <td>95.7%</td>
+                <td>Main cluster - diverse behaviors</td>
+            </tr>
+            <tr>
+                <td>Cluster 1</td>
+                <td>1</td>
+                <td>0.07%</td>
+                <td>Unique behavior pattern</td>
+            </tr>
+            <tr>
+                <td>Cluster 2</td>
+                <td>1</td>
+                <td>0.07%</td>
+                <td>Extreme volatility</td>
+            </tr>
+            <tr>
+                <td>Cluster 3</td>
+                <td>1</td>
+                <td>0.07%</td>
+                <td>Highest risk profile</td>
+            </tr>
+            <tr>
+                <td>Cluster 4</td>
+                <td>56</td>
+                <td>4.1%</td>
+                <td>Alternative patterns</td>
+            </tr>
+        </table>
+    </div>
+    <div class="stat-box">
+        <h3>Clustering Quality</h3>
+        <ul>
+            <li><strong>Silhouette Score:</strong> <span class="success">0.992</span> (Excellent separation)</li>
+            <li><strong>Clear behavioral patterns</strong> identified</li>
+            <li><strong>Risk levels</strong> vary dramatically across clusters</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Slide 8: Risk Analysis -->
+<div class="slide">
+    <h1>Risk Analysis</h1>
+    <h2>Risk Distribution Across Cryptocurrencies</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>Risk Categories</h3>
+            <ul>
+                <li><span class="warning">Very High Risk:</span> 1,329 coins (96.1%)</li>
+                <li><span class="warning">High Risk:</span> 47 coins (3.4%)</li>
+                <li><span class="highlight">Medium Risk:</span> 3 coins (0.2%)</li>
+                <li><span class="success">Low Risk:</span> 4 coins (0.3%)</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>Volatility Range</h3>
+            <ul>
+                <li><strong>Minimum:</strong> 0.0101 (daily volatility)</li>
+                <li><strong>Maximum:</strong> 2,969.19 (daily volatility)</li>
+                <li><span class="warning">295,000x difference</span> in risk levels</li>
+            </ul>
+        </div>
+    </div>
+    <div class="stat-box">
+        <h3>Key Finding</h3>
+        <p>The cryptocurrency market is predominantly <span class="warning">very high risk</span>, requiring careful selection and risk management</p>
+    </div>
+</div>
+
+<!-- Slide 9: Investment Recommendations -->
+<div class="slide">
+    <h1>Investment Recommendations by Profile</h1>
+    <div class="grid">
+        <div class="card">
+            <h3>Conservative Investors</h3>
+            <ul>
+                <li><strong>Suitable Coins:</strong> <span class="warning">0 identified</span></li>
+                <li><strong>Recommendation:</strong> Focus on stablecoins or traditional assets</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>Moderate Investors</h3>
+            <ul>
+                <li><strong>Suitable Coins:</strong> 1 (Colu Local Network)</li>
+                <li><strong>Expected Return:</strong> -0.92% daily</li>
+                <li><strong>Volatility:</strong> 4.64%</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>Aggressive Investors</h3>
+            <ul>
+                <li><strong>Suitable Coins:</strong> 206</li>
+                <li><strong>Top Pick:</strong> Stratis (0.97% daily return)</li>
+                <li><strong>Notable:</strong> Ethereum included in this category</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>Speculative Investors</h3>
+            <ul>
+                <li><strong>Suitable Coins:</strong> 1,153</li>
+                <li><strong>Top Pick:</strong> MACRON (15.3% daily return)</li>
+                <li><strong>Warning:</strong> Extreme volatility (72.6%)</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 10: Portfolio Strategies -->
+<div class="slide">
+    <h1>Portfolio Diversification Strategies</h1>
+    <div class="grid">
+        <div class="card">
+            <h3>1. Cluster-Based Diversification</h3>
+            <ul>
+                <li>Allocate across different behavioral clusters</li>
+                <li>Reduces concentration risk</li>
+                <li>Balanced risk-return profile</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>2. Risk-Tiered Portfolio</h3>
+            <ul>
+                <li>50% Low Risk</li>
+                <li>30% Medium Risk</li>
+                <li>15% High Risk</li>
+                <li>5% Very High Risk</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>3. Core-Satellite Strategy</h3>
+            <ul>
+                <li>70% in top market cap coins (core)</li>
+                <li>30% in selected altcoins (satellites)</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>4. Bitcoin-Correlation Based</h3>
+            <ul>
+                <li>Mix high, medium, and low correlation coins</li>
+                <li>True diversification from Bitcoin movements</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 11: Market Strategies -->
+<div class="slide">
+    <h1>Market Condition Strategies</h1>
+    <div class="grid">
+        <div class="card">
+            <h3>Bull Market</h3>
+            <ul>
+                <li><strong>Focus:</strong> High-growth, volatile altcoins</li>
+                <li><strong>Clusters:</strong> 2, 3</li>
+                <li><strong>Action:</strong> Increase growth allocation by 20%</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>Bear Market</h3>
+            <ul>
+                <li><strong>Focus:</strong> Established, high market cap coins</li>
+                <li><strong>Clusters:</strong> 0</li>
+                <li><strong>Action:</strong> Increase stable allocation to 30-40%</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>High Volatility</h3>
+            <ul>
+                <li><strong>Focus:</strong> Risk reduction</li>
+                <li><strong>Action:</strong> Smaller positions, wider diversification</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>Consolidation</h3>
+            <ul>
+                <li><strong>Focus:</strong> Quality accumulation</li>
+                <li><strong>Action:</strong> Balanced allocation, prepare for breakout</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 12: Risk Management -->
+<div class="slide">
+    <h1>Risk Management Guidelines</h1>
+    <div class="grid">
+        <div class="card">
+            <h3>Position Sizing by Risk Level</h3>
+            <table>
+                <tr>
+                    <th>Risk Level</th>
+                    <th>Max Position</th>
+                    <th>Stop Loss</th>
+                </tr>
+                <tr>
+                    <td>Low Risk</td>
+                    <td>10-15%</td>
+                    <td>5-10%</td>
+                </tr>
+                <tr>
+                    <td>Medium Risk</td>
+                    <td>5-10%</td>
+                    <td>10-15%</td>
+                </tr>
+                <tr>
+                    <td>High Risk</td>
+                    <td>2-5%</td>
+                    <td>15-20%</td>
+                </tr>
+                <tr>
+                    <td>Very High Risk</td>
+                    <td>1-2%</td>
+                    <td>20-25%</td>
+                </tr>
+            </table>
+        </div>
+        <div class="card">
+            <h3>Diversification Rules</h3>
+            <ul>
+                <li>Minimum 10-15 different cryptocurrencies</li>
+                <li>No more than 20% in any single coin</li>
+                <li>At least 3 different clusters represented</li>
+                <li>Maximum 40% in high correlation coins</li>
+            </ul>
+        </div>
+    </div>
+    <div class="stat-box">
+        <h3>Rebalancing Frequency</h3>
+        <ul>
+            <li><strong>Conservative:</strong> Quarterly</li>
+            <li><strong>Moderate:</strong> Monthly</li>
+            <li><strong>Aggressive:</strong> Bi-weekly</li>
+            <li><strong>Speculative:</strong> Weekly</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Slide 13: Key Insights -->
+<div class="slide">
+    <h1>Key Insights & Findings</h1>
+    <div class="stat-box">
+        <h2>Major Discoveries</h2>
+        <ul>
+            <li><span class="highlight">5 distinct behavioral clusters</span> identified with 99.2% clustering quality</li>
+            <li><span class="warning">96% of cryptocurrencies</span> classified as very high risk</li>
+            <li><span class="highlight">Bitcoin correlation</span> varies from -0.09 to 1.00 across clusters</li>
+            <li><span class="highlight">Top 10 coins</span> represent 70.8% of total market cap</li>
+            <li><span class="warning">Volatility range:</span> 0.01 to 2,969 (295,000x difference)</li>
+        </ul>
+    </div>
+    <div class="stat-box">
+        <h2>Investment Implications</h2>
+        <ul>
+            <li>Conservative investors have very limited options</li>
+            <li>Diversification across clusters can significantly reduce risk</li>
+            <li>Market timing strategies vary by cluster selection</li>
+            <li>Risk management is critical for crypto investments</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Slide 14: Visual Analytics -->
+<div class="slide">
+    <h1>Visual Analytics Dashboard</h1>
+    <h2>Investment Insights Dashboard Components</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>Risk-Return Scatter Plot</h3>
+            <ul>
+                <li>Shows all coins plotted by volatility vs. return</li>
+                <li>Color-coded by investor profile suitability</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>Portfolio Comparison</h3>
+            <ul>
+                <li>Annual return percentages by strategy</li>
+                <li>Volatility comparison</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>Risk Distribution</h3>
+            <ul>
+                <li>Pie chart showing overall market risk levels</li>
+                <li>96% classified as very high risk</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>Cluster Analysis</h3>
+            <ul>
+                <li>Risk heatmap by cluster</li>
+                <li>Market cap distribution</li>
+                <li>Bitcoin correlation analysis</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 15: Project Outcomes -->
+<div class="slide">
+    <h1>Project Outcomes & Deliverables</h1>
+    <div class="grid">
+        <div class="card">
+            <h3>Completed Deliverables</h3>
+            <ul>
+                <li><strong>Cleaned Dataset:</strong> 7 processed CSV files (2013-2018 + combined)</li>
+                <li><strong>Clustering Model:</strong> 5 behavioral clusters identified</li>
+                <li><strong>Risk Assessment:</strong> Complete risk scoring for 1,383 cryptocurrencies</li>
+                <li><strong>Investment Recommendations:</strong> Tailored for 4 investor profiles</li>
+                <li><strong>Visual Reports:</strong> 
+                    <ul style="margin-left: 40px;">
+                        <li>Cluster analysis dashboard</li>
+                        <li>Investment insights visualization</li>
+                        <li>Individual cluster profiles</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>Technical Assets</h3>
+            <ul>
+                <li>3 Jupyter notebooks (fully documented)</li>
+                <li>Automated data pipeline</li>
+                <li>Reproducible analysis framework</li>
+                <li>JSON insights for programmatic access</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 16: Future Enhancements -->
+<div class="slide">
+    <h1>Future Enhancements</h1>
+    <div class="grid">
+        <div class="card">
+            <h3>Potential Improvements</h3>
+            <ul>
+                <li><strong>Real-time Analysis:</strong> Update with current market data</li>
+                <li><strong>Predictive Modeling:</strong> Add price prediction capabilities</li>
+                <li><strong>Sentiment Analysis:</strong> Incorporate social media data</li>
+                <li><strong>Advanced Features:</strong> Technical indicators, on-chain metrics</li>
+                <li><strong>Interactive Dashboard:</strong> Web-based portfolio tool</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>Extended Applications</h3>
+            <ul>
+                <li>Automated trading strategies</li>
+                <li>Risk alert systems</li>
+                <li>Portfolio optimization algorithms</li>
+                <li>Market anomaly detection</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 17: Conclusions -->
+<div class="slide">
+    <h1>Conclusions & Recommendations</h1>
+    <div class="stat-box">
+        <h2>Key Takeaways</h2>
+        <ul>
+            <li><span class="warning">Cryptocurrency market is predominantly high-risk</span> (96% very high risk)</li>
+            <li><span class="highlight">Behavioral clustering provides valuable segmentation</span> for investment decisions</li>
+            <li><span class="success">Diversification across clusters</span> can improve risk-adjusted returns</li>
+            <li><span class="warning">Risk management is essential</span> - position sizing and stop losses critical</li>
+        </ul>
+    </div>
+    <div class="stat-box">
+        <h2>Recommendations</h2>
+        <ul>
+            <li><strong>For Conservative Investors:</strong> Consider traditional assets or stablecoins</li>
+            <li><strong>For Moderate Investors:</strong> Focus on top market cap coins with careful position sizing</li>
+            <li><strong>For Aggressive Investors:</strong> Diversify across clusters with strict risk management</li>
+            <li><strong>For All Investors:</strong> Never invest more than you can afford to lose</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Slide 18: Q&A -->
+<div class="slide title-slide">
+    <h1>Questions & Discussion</h1>
+    <div class="stat-box" style="max-width: 600px; margin: 40px auto;">
+        <h3>Contact Information</h3>
+        <ul>
+            <li><strong>Project Repository:</strong> [GitHub Link]</li>
+            <li><strong>Dataset Source:</strong> Kaggle - All Crypto Currencies</li>
+            <li><strong>Analysis Period:</strong> 2013-2018</li>
+        </ul>
+    </div>
+    <div class="stat-box" style="max-width: 600px; margin: 40px auto;">
+        <h3>Disclaimers</h3>
+        <ul>
+            <li>Historical performance does not guarantee future results</li>
+            <li>Cryptocurrency investments are highly volatile and risky</li>
+            <li>Always conduct your own research</li>
+            <li>Consider consulting with a financial advisor</li>
+        </ul>
+    </div>
+    <p class="subtitle" style="margin-top: 40px;">Thank you for your attention!</p>
+</div>
+
+<!-- Navigation -->
+<div class="nav">
+    <button onclick="previousSlide()">Previous</button>
+    <span id="slideNumber">1 / 18</span>
+    <button onclick="nextSlide()">Next</button>
+</div>
+
+<script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const totalSlides = slides.length;
+
+    function showSlide(n) {
+        slides[currentSlide].style.display = 'none';
+        currentSlide = (n + totalSlides) % totalSlides;
+        slides[currentSlide].style.display = 'flex';
+        document.getElementById('slideNumber').textContent = `${currentSlide + 1} / ${totalSlides}`;
+        slides[currentSlide].scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function nextSlide() {
+        showSlide(currentSlide + 1);
+    }
+
+    function previousSlide() {
+        showSlide(currentSlide - 1);
+    }
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight') nextSlide();
+        if (e.key === 'ArrowLeft') previousSlide();
+    });
+
+    // Initialize
+    slides.forEach((slide, index) => {
+        if (index !== 0) slide.style.display = 'none';
+    });
+</script>
+
+</body>
+</html>
