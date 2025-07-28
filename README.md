@@ -61,4 +61,27 @@ Behavior can change over time. We'll explore using fixed windows (e.g., past 6 m
 ### Labeling & Validation
 Unsupervised learning lacks ground truth. Lack of clarity in interpreting clusters and assessment performance.
 
+## Techniques and Technologies
+    * -Data stored in .csv formats and code stored in jupyter notebooks
+    * -Python libraries used include: pandas, numpy, scikit-learn, matplotlib, seaborn, streamlit and plotly
+    * -The k-Nearest Neighbors (KNN) algorithm selected from testing to group coins based on similar risk profiles
 
+## Instructions & Key Findings
+
+### KNN 30 Day Risk Profile Model
+    * -Excute all cells in '/data/data_exploration.ipynb' which will process the raw dataset 'crypto-markets.csv' and output 'crypto-markets-processed.csv' which will be used for clustering.
+    * -Execute all cells in 'src/knn_30day_risk_profile.ipynb' which will run the model, cluster the data and output performance metrics. It will also output 'risk_df.csv' which will be used as source data for the dashboard.
+    * -To run the dashboard you must have streamlit installed in an appropriate environment: 'pip install streamlit'. To run the dashboard enter the following in bash terminal: 'streamlit run crypto_dashboard.py'
+
+Coins can be seperated into 3 clusters based on traditional definitions of low, medium and high risk. Further clustering can be completed which seperates coins within these traditional categories based on certain key metrics such as volatility, market cap or returns. Three different methods were employed to optimize the hyperparameter k (number of clusters). The elbow (inertia) method measures within cluster compactness (how close points are to centroid) gives a k of 6. The silhouette score measures how well seperated the clusters are (reduces overlap and keeps them distinct) and highest score found is when k = 2. A hierarchical cluster (dendogram) shows us the split at different levels. Drawing a line at natural split points that maximize gaps between merges gives a k of 5 or 6. Ultimately we landed on optimzal k = 6.
+
+To validate clusters, coins of known categories such as stable coins (Tether, USDC, Dai), layer-1 coins (Bitcoin, Ethereum, Cardano), DeFi coins (Compound Coin), and meme coins (Dogecoin, Pepe Cash) were reviewed to ensure they fell into expected buckets at expected times over their respective histories. For example certain coins like dogecoin, despite well known meme status, remained stable with little price volatility for years before having brief explosive meme status. Other stable coins like Tether behave as expected by not moving over time from their given label. The dashboard allows to explore individual coins of interest or make comparisons for the purposes of portfolio construction in alignment with risk tolerance or appetite.
+
+The 'Average Return Over Time by Cluster Risk' graph provides insight that coins that are and remain sticky within the 'medium-high risk / high-volatility / positive return' provides the best risk-adjusted returns. However, this still comes with huge risks that typical retail investors may not be accustomed to.
+
+## Individual Reflection Videos
+   * **Xavier** - https://drive.google.com/file/d/1rhqMPu9IOVWo8FRuPL73OfLpTkzVqAxB/view?usp=drive_link
+   * **Anitha** -
+   * **Tom** -
+   * **Puneet** -
+   * **Aya** - 
