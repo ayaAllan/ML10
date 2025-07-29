@@ -82,7 +82,6 @@ The 'Average Return Over Time by Cluster Risk' graph provides insight that coins
 ## Individual Reflection Videos
    * **Xavier** - https://drive.google.com/file/d/1rhqMPu9IOVWo8FRuPL73OfLpTkzVqAxB/view?usp=drive_link
    * **Anitha** - - [Anitha Aravindaraman – Video Reflection](https://www.loom.com/share/8327044924c944a5ae3fe9b3a235601c?sid=5439185c-70bd-4bd6-9680-17ccf780e931)
-
-   * **Tom** -
+   * **Tom** - [Tom Varghese Konikkara](https://drive.google.com/file/d/1K5OrcqOREWThcJpAXQm-6_98Qn9KwFVf/view?usp=drivesdk)
    * **Puneet** -
    * **Aya** - 
